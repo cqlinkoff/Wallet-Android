@@ -4,7 +4,6 @@ import android.content.Context;
 
 import com.mbr.wallet.core.MBRWallet;
 import com.mbr.wallet.core.config.IMBRWalletConfigDelegate;
-import com.mbr.wallet.core.config.MBRWalletCompatibleConfig;
 import com.mbr.wallet.core.config.MBRWalletConfigDelegate;
 import com.mbr.wallet.network.config.IMBRWalletNetConfigDelegate;
 import com.mbr.wallet.network.config.MBRWalletNetConfigDelegate;
@@ -18,7 +17,6 @@ public enum WalletConfig implements IMBRWalletConfigDelegate,IMBRWalletNetConfig
     INSTANCE;
     private Context context;
     private MBRWalletNetConfigDelegate mNetConfigDelegate;
-    private MBRWalletCompatibleConfig mCompatibleConfig;
     private MBRWalletConfigDelegate mWalletDelegate;
 
     /**
@@ -34,18 +32,10 @@ public enum WalletConfig implements IMBRWalletConfigDelegate,IMBRWalletNetConfig
             mNetConfigDelegate.setChannel("73088886094000");
             mNetConfigDelegate.setPushId("");
         }
-        //兼容配置
-        if(mCompatibleConfig == null){
-            mCompatibleConfig = new MBRWalletCompatibleConfig();
-            mCompatibleConfig.setBelowFingerReset(false);
-            mCompatibleConfig.setEnableTouchId(false);
-            mCompatibleConfig.setPrefix("");
-        }
 
         //钱包配置
         if(mWalletDelegate == null){
             mWalletDelegate = new MBRWalletConfigDelegate();
-            mWalletDelegate.setCompatibleConfig(mCompatibleConfig);
             mWalletDelegate.setNetworkConfigDelegate(this);
             mWalletDelegate.setChain("-1");
         }
