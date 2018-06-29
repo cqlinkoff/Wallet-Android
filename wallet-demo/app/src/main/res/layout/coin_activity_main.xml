@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3">
+
+        <Button
+            android:id="@+id/syncAllCoin"
+            style="@style/ButtonStyle"
+            android:text="同步所有币"/>
+
+        <Button
+            android:id="@+id/getAllCoin"
+            style="@style/ButtonStyle"
+            android:text="获取所有币"/>
+
+        <Button
+            android:id="@+id/getForceCoin"
+            style="@style/ButtonStyle"
+            android:text="获取强制币信息"/>
+
+        <Button
+            android:id="@+id/getUnForceCoin"
+            style="@style/ButtonStyle"
+            android:text="获取非强制币信息"/>
+
+        <Button
+            android:id="@+id/getGasInfo"
+            style="@style/ButtonStyle"
+            android:text="获取gas信息"/>
+
+    </GridLayout>
+
+    <ListView
+        android:id="@+id/coinList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

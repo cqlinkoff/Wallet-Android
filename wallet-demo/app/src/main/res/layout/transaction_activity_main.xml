@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:showDividers="end|middle"
+    android:divider="@drawable/bg_bottom_line">
+
+    <include layout="@layout/toolbar"/>
+
+    <Button
+        android:id="@+id/btn_pay"
+        style="@style/ListButton"
+        android:text="支付"/>
+
+    <Button
+        android:id="@+id/btn_transfer"
+        style="@style/ListButton"
+        android:text="转账"/>
+
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:showDividers="middle|end"
+    android:divider="@drawable/bg_bottom_line">
+
+    <include layout="@layout/toolbar"/>
+
+    <Button
+        android:id="@+id/checkPwd"
+        style="@style/ListButton"
+        android:text="检查密码"/>
+
+    <Button
+        android:id="@+id/setPwd"
+        style="@style/ListButton"
+        android:text="设置密码"/>
+
+    <Button
+        android:id="@+id/modifyPwd"
+        style="@style/ListButton"
+        android:text="修改密码"/>
+</LinearLayout>
