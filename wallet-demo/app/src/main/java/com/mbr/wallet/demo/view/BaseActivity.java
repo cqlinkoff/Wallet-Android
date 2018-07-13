@@ -1,20 +1,16 @@
 package com.mbr.wallet.demo.view;
 
 import android.content.pm.ActivityInfo;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
 import com.mbr.wallet.demo.R;
 import com.mbr.wallet.demo.util.DialogUtil;
-
-import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -57,6 +53,12 @@ public class BaseActivity extends AppCompatActivity {
      */
     protected void addMenu(String menuTitle, View.OnClickListener clickListener) {
         menuMap.put(menuTitle, clickListener);
+    }
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        DialogUtil.init(this);
     }
 
     @Override

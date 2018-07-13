@@ -7,13 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.mbr.wallet.core.MBRWallet;
 import com.mbr.wallet.core.service.account.MBRAccount;
 import com.mbr.wallet.demo.R;
+import com.mbr.wallet.demo.util.BgCoinBind;
 import com.mbr.wallet.demo.util.DialogUtil;
 import com.mbr.wallet.demo.view.BaseActivity;
 import com.mbr.wallet.network.bean.MBRBgCoin;
@@ -193,7 +193,7 @@ public class AccountActivity extends BaseActivity {
             //循环添加持有币信息
             StringBuilder coinInfo = new StringBuilder();
             for(MBRBgCoin coin: account.getCoins()) {
-                coinInfo.append(coin.getAbbr() + "：" + coin.getAmount() + "\t");
+                coinInfo.append(coin.getAbbr() + "：" + BgCoinBind.displayCount(coin) + "\t");
             }
             coinTextView.setText(coinInfo.toString());
 
