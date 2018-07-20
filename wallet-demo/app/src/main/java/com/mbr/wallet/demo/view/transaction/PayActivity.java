@@ -136,8 +136,6 @@ public class PayActivity extends BaseActivity {
         mbrPayParam.setGasPrice(gas);
         //设置备注
         mbrPayParam.setMemo(memo);
-        //设置订单信息
-        mbrPayParam.setOrder(orderInfo);
 
         Disposable disposable =Observable.create((ObservableEmitter<MBRPayResponse> emitter) ->{
             //检查余额

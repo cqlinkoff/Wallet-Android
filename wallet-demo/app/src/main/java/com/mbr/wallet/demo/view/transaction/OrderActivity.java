@@ -151,8 +151,6 @@ public class OrderActivity extends BaseActivity {
             String[] paramValue = param.split("=");
             dataJson.put(paramValue[0], paramValue[1]);
         }
-        //必要的参数,保存订单原始字符串
-        dataJson.put("o", data);
 
         return dataJson;
     }
